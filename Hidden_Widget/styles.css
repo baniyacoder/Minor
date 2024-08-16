@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background-color: rgb(228, 23, 255);
+}
+
+.search_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.input{
+    width: 200px;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    transition: all 0.1s linear;
+    
+}
+
+.active{
+    width: 0px;
+    padding: 0;
+}
+.btn{
+    font-size: 24px;
+    border: none;
+    padding: 10px;
+    background-color: #fff;
+    transform: translate(-100%);
+    transition: all 0.1s linear;
+    cursor: pointer;
+}
+
+.input:focus{
+    outline: none;
+}

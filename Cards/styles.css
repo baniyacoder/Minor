@@ -1,0 +1,135 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500vh;
+    gap: 200px;
+}
+
+.Card-1{
+    width: 320px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.content-1{
+    position: relative;
+    text-transform: capitalize;
+    color: #777;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.card-1-content-link{
+    margin-top: 10px;
+    font-size: 14px;
+    display: inline-block;
+    text-decoration: none;
+    color: #777;
+    padding: 7px 10px;
+    font-weight: 600;
+    background-color: white;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+.card-1-content-heading{
+    margin-bottom: 10px;
+    margin-top: 0;
+    font-size: 30px;
+}
+
+.Card-1::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: calc(-100% + 5px); 
+    background-color: #f71d78;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.Card-1:hover::before{
+    bottom: 0;
+}
+
+.Card-1:hover .content-1{
+    color: white;
+}
+
+
+.Card-2{
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    padding: 40px;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    transition: all 0.3s;
+}
+
+.imgbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-90px);
+    z-index: 2;
+}
+
+.Card-2 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.Card-2:hover{
+    height: 420px;
+}
+
+.content-2{
+    padding: 20px;
+    text-align: center;
+    color: #111;
+    transform: translateY(-500px);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.Card-2:hover .content-2{
+    opacity: 1;
+    transform: translateY(-200px);
+}
+
+
+.Card-3{
+    width: 500px;
+    height: 300px;
+    padding: 40px;
+    position: relative;
+    background-image: linear-gradient(45deg,#880ffa,#e4b5ff);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    
+}
+
+.Card-3 img{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 400px;
+    transition: all 0.3s;
+}
+
+.Card-3:hover img{
+    height: 450px;
+    left: 80%;
+}

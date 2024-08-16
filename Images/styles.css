@@ -1,0 +1,220 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    font-family: sans-serif;
+    gap: 100px;
+}
+.skew-transparent-image-container1{
+    height: 500px;
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    transition: all 1s;
+}
+
+.skew-transaprent-caption1{
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.skew-transparent-image-container1:hover img{
+    transform: scale(1.3) rotate(15deg);
+}
+.skew-transparent-image-container1:hover .skew-transaprent-caption1{
+    opacity: 1;
+}
+
+/* -------------------VAriation of above effect---------------------------------------- */
+
+
+.skew-transparent-image-container2{
+    height: 500px;
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    transition: all 1s;
+}
+
+.skew-transaprent-caption2{
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* transform: translateX(-100%);  */
+    transform: scaleX(2);
+    transition: all 1s;
+}
+
+.skew-transparent-image-container2:hover img{
+    transform: scale(1.3) rotate(-15deg);
+}
+/* we can create different swipe effects coming from all 4 directions in a square using transalate in skew-transparent-caption2 and  .skew-transparent-image-container2:hover .skew-transaprent-caption2  */
+.skew-transparent-image-container2:hover .skew-transaprent-caption2{
+    
+    opacity: 1;
+    transform: scaleX(1)
+}
+
+/* ------------------------------------------------------------------------------------- */
+
+.skew-transparent-image-container3{
+    height: 500px;
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    transition: all 1s;
+}
+
+.skew-transaprent-caption3{
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 1);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    
+    color: white;
+    transform: translateY(+100%);
+    transition: all 1s;
+}
+
+.skew-transparent-image-container3:hover img{
+    transform: translateY(-100%);
+}
+.skew-transparent-image-container3:hover .skew-transaprent-caption3{
+    transform: translateY(0%);
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+.skew-transparent-image-container4{
+    height: 500px;
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    transition: all 1s;
+}
+
+.skew-transaprent-caption4{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0,1);
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    transform: translateY(100%);
+    transition: all 1s;
+    color: white;
+}
+
+.skew-transparent-image-container4:hover img{
+    transform: translateY(-30%);
+}
+.skew-transparent-image-container4:hover .skew-transaprent-caption4{
+    transform: translateY(0%);
+    
+}
+
+/* -------------------second effect------------------------------- */
+
+.semi-transparent-image-container1{
+    height: 500px;
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.semi-transparent-image-container1::before{
+    content:'';
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(160, 255, 239, 0.521);
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: all 0.3s 0.35s;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+    .semi-transparent-caption1{
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: all 0.35s 0.4s;
+
+    }
+    .semi-transparent-caption1 .caption-1{
+        color: antiquewhite;
+    }
+
+    .semi-transparent-caption1 .sub-caption-2{
+        color: aliceblue;
+        background-color: chocolate;
+        padding: 2px;
+    }
+
+    .semi-transparent-image-container1:hover::before{
+        transform: translateY(0);
+    }
+
+    .semi-transparent-image-container1:hover .semi-transparent-caption1{
+        transform: translateY(0);
+        opacity: 1;
+    }

@@ -1,0 +1,947 @@
+*{
+    box-sizing: border-box;
+}
+.container-1{
+    display: flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+.button-1,.button-2,.button-3,.button-4,.button-5{
+    text-decoration: none;
+    color: #272727;
+    font-family: sans-serif;
+    font-size: 45px;
+    padding: 20px 40px;
+    position:relative;
+    border:5px solid #272727;
+    overflow: hidden;
+}
+
+.button-1::before,.button-2::before,.button-3::before,.button-4::before,.button-5::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background-color: yellow;
+    z-index: -1;
+}
+
+/* Button-1 design */
+.button-1::before{
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+    transition:transform 1s; 
+}
+
+.button-1:hover:before{
+    transform:rotate(0deg)
+}
+
+/* ******************************************* */
+.button-2::before{
+    transform-origin: top left;
+    transform: rotate(-90deg);
+    transition:transform 1s;
+}
+
+.button-2:hover:before{
+    transform:rotate(0deg)
+}
+
+/* ******************************************** */
+
+.button-3::before{
+    transform-origin: top right;
+    transform: rotate(+90deg);
+    transition:transform 1s;
+}
+
+.button-3:hover:before{
+    transform:rotate(0deg)
+}
+
+/* ******************************* */
+
+.button-4::before{
+    transform-origin: bottom right;
+    transform: rotate(90deg);
+    transition:transform 1s;
+}
+
+.button-4:hover:before{
+    transform:rotate(0deg)
+}
+
+/* ****************************************** */
+
+
+/* -------------------------------Swipe Button ------------------------ */
+
+.swipe-container-2{
+    display: flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+.swipe-button-1,.swipe-button-2,.swipe-button-3,.swipe-button-4{
+    text-decoration: none;
+    color: #351435;
+    font-family: sans-serif;
+    font-size: 40px;
+    border: 3px solid #351435;
+    padding: 20px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: all 2s;
+    
+}
+.swipe-button-1::before,.swipe-button-2::before,.swipe-button-3::before,.swipe-button-4::before{
+    content:"YEAH";
+    color:white;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: #351435;
+    width:100%;
+    height:100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swipe-button-1::before{
+    
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+.swipe-button-1:hover::before{
+    transform: translateX(0%);
+}
+
+.swipe-button-1:hover{
+    color: white;
+}
+
+/* ******************************************************** */
+
+.swipe-button-2::before{
+    
+    transform: translateX(100%);
+    transition: all 2s;
+}
+.swipe-button-2:hover::before{
+    transform: translateX(0%);
+}
+
+.swipe-button-2:hover{
+    color: white;
+}
+
+/* ******************************************************** */
+
+.swipe-button-3::before{
+    
+    transform: translateY(100%);
+    transition: all 2s;
+}
+.swipe-button-3:hover::before{
+    transform: translateX(0%);
+}
+
+.swipe-button-3:hover{
+    color: white;
+}
+
+/* ******************************************************** */
+
+.swipe-button-4::before{
+    
+    transform: translateY(-100%);
+    transition: all 2s;
+}
+.swipe-button-4:hover::before{
+    transform: translateX(0%);
+}
+
+.swipe-button-4:hover{
+    color: white;
+}
+
+/* ****************************************** */
+
+
+/* ------------------------------Cross Effect buttons------------------------ */
+
+
+.cross-container-3{
+    display: flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+.cross-button-1,.cross-button-2,.cross-button-3,.cross-button-4{
+    text-decoration: none;
+    color: #262626;
+    font-family: sans-serif;
+    font-size: 40px;
+    border: 3px solid #262626;
+    padding: 20px 40px;
+    position: relative;
+    letter-spacing: 2px;
+    transition:all 1s;
+}
+
+.cross-button-1::before,.cross-button-2::before,.cross-button-3::before,.cross-button-4::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    transform: rotateX(90deg);
+    transition: 1s;
+    z-index: -1;
+}
+.cross-button-1::after,.cross-button-2::after,.cross-button-3::after,.cross-button-4::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    transform: rotateY(90deg);
+    transition: 1s;
+    z-index: -1;
+}
+.cross-button-1:hover::before{
+    transform: rotateX(0deg);
+}
+.cross-button-1:hover::after{
+    transform: rotateY(0deg);
+}
+.cross-button-1:hover{
+    color: white;
+}
+
+/* ------------------------border swap button------------------------ */
+.border-swap-container{
+    display: flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #262626;
+}
+
+.border-swap-button-1{
+    text-decoration: none;
+    color:#FDC518;
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    letter-spacing: 3px;
+    height: 80px;
+    width: 200px;
+    text-align: center;
+    line-height: 70px;
+    transition: all 2s;
+    /* border: 2px solid blue; */
+}
+.border-swap-button-1::before{
+    content: "";
+    position:absolute;
+    height: 90px;
+    width: 200px;
+    top: -15px;
+    left: 0;
+    border-left:2px solid red;
+    border-right:2px solid #FDC518;
+    transition: all 2s;
+}
+
+.border-swap-button-1::after{
+    content: "";
+    position:absolute;
+    height: 60px;
+    width: 230px;
+    top: 0;
+    left: -15px;
+    border-top:2px solid red;
+    border-bottom:2px solid #FDC518;
+    transition: all 2s;
+}
+
+.border-swap-button-1:hover::before{
+    transform: rotateY(180deg);
+}
+.border-swap-button-1:hover::after{
+    transform: rotateX(180deg);
+}
+.border-swap-button-1:hover{
+    color:red;
+}
+
+/* --------------------Stretch Button------------------------ */
+
+.stretch-container{
+    display: flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.stretch-button-1{
+    text-decoration: none;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 20px 40px;
+    border:2px solid maroon;
+    transition: all 0.5s;
+    color:maroon;
+    letter-spacing: -1px;
+}
+
+.stretch-button-1:hover{
+    letter-spacing: 3px;
+    font-weight: 700;
+    border-width: 5px;
+}
+
+/* ----------------------------glow button--------------------------------- */
+
+.glow-container{
+    display: flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #262626;
+}
+
+.glow-button-1,.glow-button-2{
+    text-decoration: none;
+    padding: 20px 40px;
+    position: relative;
+    font-family: sans-serif;
+    color: white;
+    border: 3px solid white;
+    font-size: 40px;
+    transition: all 0.1s;
+    overflow:hidden;
+}
+
+.glow-button-1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 30px;
+    transform: translateX(-100%) rotate(45deg);
+    transition: all 0.1s;
+}
+
+.glow-button-1:hover{
+    background-color: red;
+}
+
+.glow-button-1:hover::before{
+    transform:translateX(100%) rotate(45deg);
+}
+
+/* -------------------------two layers swapping button--------------------------------- */
+
+
+.two-layer-container{
+    display: flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+.layer-button-1,.layer-button-2{
+    text-decoration: none;
+    position: relative;
+    font-size: 40px;
+    font-family: sans-serif;
+    color:#262626;
+    padding: 20px 40px;
+    border: 2px solid black;
+    background-color: #FDC518;
+    overflow: hidden;
+    color:transparent;
+}
+
+.layer-button-1::before,.layer-button-2::before{
+    content:"Hover Me";
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:0%;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: #351435;
+    transition: all 1s;
+}
+
+.layer-button-1::after,.layer-button-2::after{
+    content:"Hover Me";
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:0%;
+    left:0%;
+    width:100%;
+    height:100%;
+    background-color: #351435;
+    transition: all 1s;
+}
+.layer-button-1::after{
+    transform: translate(-100%,100%);
+}
+.layer-button-1:hover::before{
+    transform:translate(100%,-100%);
+}
+
+.layer-button-1:hover::after{
+    transform:translate(0%,0%);
+}
+/* ********************************************** */
+
+.layer-button-2::after{
+    transform: translate(-100%,-100%);
+}
+.layer-button-2:hover::before{
+    transform:translate(100%,100%);
+}
+
+.layer-button-2:hover::after{
+
+    transform:translate(0%,0%);
+} 
+
+
+/* ----------------------------text scaling button---------------------------------- */
+
+.scale-container{
+    display: flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.scale-button-1{
+    text-decoration: none;
+    font-size: 40px;
+    padding: 20px 40px;
+    position: relative;
+    border: 3px solid #262626;
+    color:#262626;
+    font-family: sans-serif;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.scale-button-1::before{
+    content: "Hover Me";
+    background-color: #262626;
+    color:white;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform:scale(5);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.scale-button-1:hover::before{
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* ---------------------------round fill button------------------------------------ */
+.round-fill-container{
+    display: flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+.round-fill-button-1,.round-fill-button-2,.round-fill-button-3,.round-fill-button-4{
+    text-decoration: none;
+    font-size: 40px;
+    padding: 20px 40px;
+    position: relative;
+    border: 3px solid #262626;
+    color:#262626;
+    font-family: sans-serif;
+    transition: all 0.1s;
+    overflow: hidden;
+}
+
+.round-fill-button-1::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    border-radius: 0 0 50% 50%;
+    background-color: #262626;
+    height: 0%;
+    transition:all 0.3s;
+    z-index: -1;
+}
+
+.round-fill-button-1:hover::before{
+    height: 200%;  
+
+}
+
+.round-fill-button-1:hover{
+    color:white;
+}
+
+/* --------------------------------------------------------------------------- */
+
+.round-fill-button-2::before{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width:100%;
+    border-radius: 50% 50% 0% 0%;
+    background-color: #262626;
+    height: 0%;
+    transition:all 0.3s;
+    z-index: -1;
+}
+
+.round-fill-button-2:hover::before{
+    height: 200%;  
+
+}
+
+.round-fill-button-2:hover{
+    color:white;
+}
+
+/* ---------------------------------------------------------------------- */
+
+.round-fill-button-3::before{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width:0%;
+    border-radius: 0% 50% 50% 0%;
+    background-color: #262626;
+    height: 100%;
+    transition:all 0.3s;
+    z-index: -1;
+}
+
+.round-fill-button-3:hover::before{
+    width: 200%;
+
+}
+
+.round-fill-button-3:hover{
+    color:white;
+}
+
+/* ---------------------------------------------------------------------------- */
+
+.round-fill-button-4::before{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    right:0;
+    width:0%;
+    border-radius: 50% 0% 0% 50%;
+    background-color: #262626;
+    height: 100%;
+    transition:all 0.3s;
+    z-index: -1;
+}
+
+.round-fill-button-4:hover::before{
+    width: 200%;
+
+}
+
+.round-fill-button-4:hover{
+    color:white;
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+.three-layer-container{
+    display: flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    background-color: #262626;
+}
+
+.three-layer-button1,
+    .three-layer-button2{
+    text-decoration: none;
+    color: wheat;
+    font-family: sans-serif;
+    font-size: 40px;
+    border: 3px solid wheat;
+    padding: 20px 40px;
+    position: relative;
+    background-color: #FDC518;
+    color: rgb(100, 1, 1);   
+    transition:all 1s;
+
+}
+
+.three-layer-button1::before{
+    content: "Hover Me";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(26, 85, 26);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: top;
+    transform: rotateX(270deg);
+    transition: all 0.5s;
+}
+
+.three-layer-button1::after{
+    content: "Hover Me";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(12, 12, 75);
+    color: wheat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: top;
+    transform: rotateX(270deg);
+    transition: all 0.5s 0.2s;
+}
+
+.three-layer-button1:hover::before{
+    transform: rotate(0deg);
+}
+.three-layer-button1:hover::after{
+    transform: rotate(0deg);
+}
+
+/* ------------------------------------------------------------------- */
+
+.three-layer-button2::before{
+    content: "Hover Me";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(26, 85, 26);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: top;
+    transform: rotateX(270deg);
+    transition: all 0.5s;
+}
+
+.three-layer-button2::after{
+    content: "Hover Me";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(12, 12, 75);
+    color: wheat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: bottom;
+    transform: rotateX(270deg);
+    transition: all 0.5s 0.2s;
+}
+
+.three-layer-button2:hover::before{
+    transform: rotate(0deg);
+}
+.three-layer-button2:hover::after{
+    transform: rotate(0deg);
+}
+
+
+/* 2 layer open in middle button */
+
+.two-layer-swipe-container{
+    display: flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+    gap:100px;
+    background-color: gray;
+}
+.two-layer-swipe-button1,.two-layer-swipe-button2{
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    font-family: sans-serif;
+    color:rgb(179, 179, 5);
+    padding: 20px 40px;
+    border: 2px solid rgb(179, 179, 5);
+    background-color: #262626;
+}
+
+/* ----------------------------------------------------------------- */
+
+.two-layer-swipe-button1::before{
+    content: 'Hover Me';
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-family: sans-serif;
+    color:rgb(179, 179, 5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(179, 179, 5);
+    background-color: #262626;
+    transition: all 0.4s;
+
+}
+
+.two-layer-swipe-button1:hover::before
+{
+    left: 100%;
+    transform: scale(0) rotateY(360deg);
+    opacity: 0;
+}
+
+.two-layer-swipe-button1::after{
+    content: 'Hover Me';
+    position:absolute;
+    top:0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-family: sans-serif;
+    color:rgb(179, 179, 5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(179, 179, 5);
+    background-color: #262626;
+    transition: all 0.4s;
+    transform: scale(0) rotateY(0deg);
+}
+
+.two-layer-swipe-button1:hover::after
+{
+    left: 0;
+    transform: scale(1) rotateY(360deg);
+    opacity: 1;
+}
+.two-layer-swipe-button1{
+    color: transparent;
+    background-color: transparent;
+}
+
+/* ------------------------------------------------------ */
+
+.two-layer-swipe-button2::before{
+    content: 'Hover Me';
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-family: sans-serif;
+    color:rgb(179, 179, 5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(179, 179, 5);
+    background-color: #262626;
+    transition: all 0.4s;
+
+}
+
+.two-layer-swipe-button2:hover::before
+{
+    top:100%;
+    transform: scale(0) rotateY(360deg);
+    opacity: 0;
+}
+
+.two-layer-swipe-button2::after{
+    content: 'Hover Me';
+    position:absolute;
+    top:-100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-family: sans-serif;
+    color:rgb(179, 179, 5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(179, 179, 5);
+    background-color: #262626;
+    transition: all 0.4s;
+    transform: scale(0) rotateY(0deg);
+}
+
+.two-layer-swipe-button2:hover::after
+{
+    top: 0;
+    transform: scale(1) rotateY(360deg);
+    opacity: 1;
+}
+.two-layer-swipe-button2{
+    color: transparent;
+    background-color: transparent;
+}
+
+/* --------------------------------Pulsing button ---------------------------------*/
+
+.pulse-container{
+    display: flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #351435;
+}
+
+.pulse-button{
+    text-decoration: none;
+    font-size: 40px;
+    padding: 20px 40px;
+    position: relative;
+    border: 3px solid #351435;
+    border-radius: 25% / 100%;
+    color:#351435;
+    font-family: sans-serif;
+    transition: all 1s;
+    background-color: white;
+    box-shadow: 3px 3px 7px 3px black;
+}
+
+.pulse-button::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 25% / 100%;
+    z-index: -1;
+    transition: all 0.2s;
+}
+
+.pulse-button:hover::after{
+    transform: scale(3);
+    z-index: 1;
+    opacity: 0;
+}
+
+.pulse-button:hover{
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 7px 3px black;
+}
+
+.pulse-button:active
+{
+    box-shadow: 3px 3px 14px 6px black;
+    transform: translateY(0px);
+}
+/* -----------------------------------2 part skew button------------------------------- */
+
+.two-part-skew-container{
+    display: flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.two-part-skew-button{
+    text-decoration: none;
+    font-size: 40px;
+    padding: 10px 40px;
+    position: relative;
+    color:#351435;
+    font-family: sans-serif;
+}
+.two-part-skew-button::before
+{
+    content: "";
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: darksalmon;
+    transform: skewX(15deg) translateY(-15px);
+    z-index: -1;
+    transition: all 0.1s;
+}
+
+.two-part-skew-button::after
+{
+    content: "";
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: brown;
+    transform: skewX(15deg) translateX(100%) translateY(10px);
+    z-index: -1;
+    transition: all 0.1s;
+}
+
+.two-part-skew-button:hover::before{
+    transform: translateX(100%) skewX(0deg)  translateY(0px);
+}
+.two-part-skew-button:hover::after{
+    transform: translateX(0%) skewX(0deg) translateY(0px);
+}

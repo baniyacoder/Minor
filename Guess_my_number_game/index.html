@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400..700&display=swap" rel="stylesheet">
+    <title>Guess My Number</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="header-button-again general-button">Again!</a>
+        <p class="header-between">(Between 1 and 20)</p>
+        <h3 class="header-title">Guess My Number</h3>
+        <div class="header-number">?</div>
+    </header>
+    <section>
+        <div class="flex-container-1">
+        <label for="number-guess"></label>
+        <input type="number" id="number-guess" name="number-guess" min="1" max="20" class="guess-number">
+        <a href="#" class="section-check-button general-button">Check!</a>
+    </div>
+    <div class="flex-container-2">
+        <p class="tag-display">Start Guessing. . .</p>
+        <p class="score-card">Score:
+            <span class="score">20</span>
+        </p>
+        <p class="highScore-card">High Score:
+            <span class="highScore">0</span>
+        </p>
+    </div>
+
+    </section>
+</body>
+<script src="script.js"></script>
+</html>

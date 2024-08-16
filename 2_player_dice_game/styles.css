@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to top right,hsl(335, 97%, 47%),rgb(151, 6, 49,0.7));
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.game_card{
+    height: 90%;
+    width: 80%;
+    background-color: rgba(253, 50, 152, 0.3);
+    opacity: 0.6;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 2px 15px rgba(22, 0, 22, 0.4);
+}
+
+.total_players{
+    display: flex;
+    flex-flow:  column nowrap;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+
+    
+}
+
+h5{
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: rgb(43, 4, 20);
+    margin-top: 3rem;
+}
+
+.current_score{
+    font-size: 6rem;
+    color: rgb(43, 4, 20);
+    text-transform: capitalize;
+    margin-top: 5.5rem;
+}
+
+.current_hold_score{
+    padding: 2rem 4rem;
+    text-align: center;
+    background-color: rgba(48, 1, 20);
+    margin-top: 10rem;
+    border-radius: 1rem;
+}
+
+.current_hold_score p{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.hold_score{
+    margin-top: 1rem;
+}
+
+button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 1.5rem 3rem;
+    border-radius: 2rem;
+    background-color: rgba(255, 148, 255,0.7);
+    border: none;
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgba(48, 1, 20);
+    cursor: pointer;
+}
+
+.new_game_button{
+    top: 20%;
+}
+
+.roll_dice_button{
+    top: 70%;
+}
+
+.hold_button{
+    top: 85%;
+}
+
+
+.display_image{
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+
+.hidden{
+    display: none;
+}
+/* active first player */
+
+.active{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50%;
+    height: 100%;
+}
